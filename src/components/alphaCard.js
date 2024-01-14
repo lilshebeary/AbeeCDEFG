@@ -1,14 +1,23 @@
-import { Card } from 'reactstrap';
-import '../styles/cardStyle.css'
-import { alphabet } from './alphabet'
+import { Card, CardBody } from "reactstrap";
+import "../styles/alphaCardStyle.css";
+import { alphabet } from "./alphabet";
 
 const alphaCard = ({ alphabet }) => {
-  return (
-   
-    <div className='card'>
-      <Card />
-    </div>
-  )
-}
+  return ( 
+  <>
+  {alphabet.map(letter => {
+    return(
+      <Card className="card">
+        <CardBody className="letter">
+          {letter}
+        </CardBody>
+      </Card>
+    )
+  })}
+  
+  
+  </>
+  );
+};
 
 export default alphaCard;
