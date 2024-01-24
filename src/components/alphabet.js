@@ -1,109 +1,114 @@
 export const upperAlpha = [
   {
-    letter:'A',
+    id:'A',
     color: '#8bc34a'
   },
   {
-    letter:'B',
+    id:'B',
   color:'#9c27b0'
 },
   {
-    letter:'C',
+    id:'C',
   color:'#3f51b5'
 },
   {
-    letter:'D',
+    id:'D',
   color:'#00bcd4'
 },
   {
-    letter:'E',
+    id:'E',
   color:'#009688'
 },
   {
-    letter:'F',
+    id:'F',
   color:'#FFCA3A'
 },
   {
-    letter:'G',
+    id:'G',
   color:'#c8b7e5'
 },
   {
-    letter:'H',
+    id:'H',
   color:'#231F20'
 },
   {
-    letter:'I',
+    id:'I',
   color:'#5ce1e6'
 },
   {
-    letter:'J',
+    id:'J',
   color:'#ff914d'
 },
   {
-    letter:'K',
+    id:'K',
   color:'#004aad'
 },
   {
-    letter:'L',
+    id:'L',
   color:'#cb6ce6'
 },
   {
-    letter:'M',
+    id:'M',
   color:'#FFE0E3'
 },
   {
-    letter:'N',
+    id:'N',
   color:'#DAF2C9'
 },
   {
-    letter:'O',
+    id:'O',
   color:'#ffbd59'
 },
   {
-    letter:'P',
+    id:'P',
   color:'#8bc34a'
 },
   {
-    letter:'Q',
+    id:'Q',
   color:'#9c27b0'
 },
   {
-    letter:'R',
+    id:'R',
   color:'#3f51b5'
 },
   {
-    letter:'S',
+    id:'S',
   color:'#00bcd4'
 },
   {
-    letter:'T',
+    id:'T',
   color:'#009688'
 },
   {
-    letter:'U',
+    id:'U',
   color:'#FFCA3A'
 },
   {
-    letter:'V',
+    id:'V',
   color:'#c8b7e5'
 },
   {
-    letter:'W',
+    id:'W',
   color:'#231F20'
 },
   {
-    letter:'X',
+    id:'X',
   color:'#5ce1e6'
 },
   {
-    letter:'Y',
+    id:'Y',
   color:'#F2D4D7'
 },
   {
-    letter:'Z',
+    id:'Z',
   color:'#A6F28A'
 }
 
 ]
 
-export const lowerAlpha = upperAlpha.map((letter) => letter.toLowerCase());
+// export let lowerAlpha = upperAlpha.map((el, i) => {
+//   return(upperAlpha[i].id.toLowerCase());
+//   });
+  
+  
+  

@@ -1,13 +1,21 @@
 /* --colors: #8bc34a, #9c27b0,#3f51b5,#00bcd4,#009688,#FFCA3A,#c8b7e5,#231F20 */
 /* #5ce1e6, #ffbd59,#cb6ce6,#004aad, #ff914d*/
 .card {
-    height: 4rem;
-    width: 2rem;
+    height: 14rem;
+    min-width: 250px;
+    max-width: 20%;
+    width: 100%;
+    margin: 1rem;
+    flex-basis: 20%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 1rem 3rem 20rem 2rem;
     border: 1px solid black;
-    background-color: aqua;
+    text-align: center;
 }
 .letter {
-    font-size: 2rem;
+   
+    font-size: 12rem;
     font-family: 'Notable', sans-serif;
     color: #ed7878;
 }
