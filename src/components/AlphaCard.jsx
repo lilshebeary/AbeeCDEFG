@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Card, CardBody} from "reactstrap";
 import "../styles/alphaCardStyle.css";
+import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const AlphaCard = ({ letters, cards }) => {
   const [start, setStart] = useState(0)
@@ -9,16 +11,19 @@ const AlphaCard = ({ letters, cards }) => {
 const handleClick = (cards) => {
   console.log(start)
   console.log(end)
-  if(start + cards < 0){
+  if(start < 0){
     setStart(0)
+    setEnd(cards) 
+  } else {
+    setStart(start + cards)
   }
-   if (end + cards < 5){
+   if (end + cards > 5){
     setEnd(5)
    } else {
     setStart(start + cards)
   }
   if(end + cards > letters.length) {
-    setEnd(letters.length)
+    setEnd(end + cards)
   }else{
     setEnd(end + cards)
   }  
@@ -26,7 +31,7 @@ const handleClick = (cards) => {
 
   return (
     <>
-    <button onClick={() => handleClick(-cards)}>left</button>
+    <button onClick={() => handleClick(-cards)}><FontAwesomeIcon icon={faChevronLeft} size="6x"/></button>
       {letters.slice(start, end).map((letter) => {
         const { id, color } = letter;
         return (
@@ -37,7 +42,7 @@ const handleClick = (cards) => {
           </Card>
         );
       })}
-      <button onClick={() => handleClick(cards)}>right</button>
+      <button onClick={() => handleClick(cards)}><FontAwesomeIcon icon={faChevronRight} size="6x" /></button>
     </>
   );
 };

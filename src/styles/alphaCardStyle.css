@@ -3,19 +3,26 @@
 .card {
     height: 14rem;
     min-width: 250px;
-    max-width: 20%;
+    max-width: 16%;
     width: 100%;
     margin: 1rem;
-    flex-basis: 20%;
+    flex-basis: 16%;
     flex-grow: 0;
     flex-shrink: 0;
-    padding: 1rem 3rem 20rem 2rem;
-    border: 1px solid black;
+    padding: 1rem 2.7rem 18rem 2rem;
+    border: 2px solid black;
+    border-radius: 4px;
     text-align: center;
 }
 .letter {
-   
     font-size: 12rem;
     font-family: 'Notable', sans-serif;
     color: #ed7878;
+}
+button {
+    margin-top: 8rem;
+    height: 8rem;
+    padding: 1em;
+    background-color: #9f82d3;
+    border-radius: 4px;
 }
