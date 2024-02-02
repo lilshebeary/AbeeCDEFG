@@ -1,36 +1,36 @@
 import { useState } from "react";
-import { Card, CardBody} from "reactstrap";
+import { Card, CardBody } from "reactstrap";
 import "../styles/alphaCardStyle.css";
-import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faChevronRight,
+  faChevronLeft,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AlphaCard = ({ letters, cards }) => {
-  const [start, setStart] = useState(0)
-  const [end, setEnd] = useState(cards)
+  const [start, setStart] = useState(0);
+  const [end, setEnd] = useState(cards);
 
-const handleClick = (cards) => {
-  console.log(start)
-  console.log(end)
-
-
-
-  // if(start < 0){
-  //   setStart(0)
-  //   setEnd(start + cards) 
-  // } else {
-  //   setStart(start + cards)
-  // }
-  //  if (end + cards > letters.length - 1){
-  //   setEnd(letters.length)
-  //  } else {
-  //   setStart(start + cards)
-  // }
-  // if(end > letters.length) {
-  //   setEnd(end + cards)
-  // }else{
-  //   setEnd(end + cards)
-  // }  
-}
+  const previous = () => {
+    console.log(start);
+    console.log(end);
+    if ((start < 0) || (start - cards < 0)) {
+      return;
+    } else {
+      setStart(start - cards);
+      setEnd(end - cards);
+    }
+  };
+  const next = () => {
+    console.log(start);
+    console.log(end);
+    if((start > letters.length - 1) || (start + cards > letters.length - 1)){
+      return
+    } else{
+      setStart(start + cards)
+      setEnd(end + cards)
+    }
+  };
 
   return (
     <>
@@ -45,8 +45,12 @@ const handleClick = (cards) => {
         );
       })}
       <div className="button-container">
-      <button onClick={() => handleClick(-cards)}><FontAwesomeIcon icon={faChevronLeft} size="6x"/></button>
-      <button onClick={() => handleClick(cards)}><FontAwesomeIcon icon={faChevronRight} size="6x" /></button>
+        <button onClick={() => previous()}>
+          <FontAwesomeIcon icon={faChevronLeft} size="6x" />
+        </button>
+        <button onClick={() => next()}>
+          <FontAwesomeIcon icon={faChevronRight} size="6x" />
+        </button>
       </div>
     </>
   );
