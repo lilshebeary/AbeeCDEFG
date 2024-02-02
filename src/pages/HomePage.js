@@ -6,8 +6,9 @@ const HomePage = () => {
   
   return (
     <div className="container"> 
+   
       <div className="card-container">
-        <AlphaCard cards={5} letters={upperAlpha}/>
+        <AlphaCard cards={1} letters={upperAlpha}/>
       </div>
     </div>
   );

@@ -11,27 +11,29 @@ const AlphaCard = ({ letters, cards }) => {
 const handleClick = (cards) => {
   console.log(start)
   console.log(end)
-  if(start < 0){
-    setStart(0)
-    setEnd(cards) 
-  } else {
-    setStart(start + cards)
-  }
-   if (end + cards > 5){
-    setEnd(5)
-   } else {
-    setStart(start + cards)
-  }
-  if(end + cards > letters.length) {
-    setEnd(end + cards)
-  }else{
-    setEnd(end + cards)
-  }  
+
+
+
+  // if(start < 0){
+  //   setStart(0)
+  //   setEnd(start + cards) 
+  // } else {
+  //   setStart(start + cards)
+  // }
+  //  if (end + cards > letters.length - 1){
+  //   setEnd(letters.length)
+  //  } else {
+  //   setStart(start + cards)
+  // }
+  // if(end > letters.length) {
+  //   setEnd(end + cards)
+  // }else{
+  //   setEnd(end + cards)
+  // }  
 }
 
   return (
     <>
-    <button onClick={() => handleClick(-cards)}><FontAwesomeIcon icon={faChevronLeft} size="6x"/></button>
       {letters.slice(start, end).map((letter) => {
         const { id, color } = letter;
         return (
@@ -42,7 +44,10 @@ const handleClick = (cards) => {
           </Card>
         );
       })}
+      <div className="button-container">
+      <button onClick={() => handleClick(-cards)}><FontAwesomeIcon icon={faChevronLeft} size="6x"/></button>
       <button onClick={() => handleClick(cards)}><FontAwesomeIcon icon={faChevronRight} size="6x" /></button>
+      </div>
     </>
   );
 };
