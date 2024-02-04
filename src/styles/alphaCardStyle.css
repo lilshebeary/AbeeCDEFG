@@ -27,12 +27,12 @@ button {
     background-color: #9f82d3;
     border-radius: 4px;
     max-width: 6rem;
-    margin-right: 2rem;
+    margin-right: 5rem;
 }
 .button-container {
     display: block;
     position: fixed;
     margin-top: 14rem;
-    margin-left: 2.5rem;
-
+    margin-left: 5rem;
+    
 }
