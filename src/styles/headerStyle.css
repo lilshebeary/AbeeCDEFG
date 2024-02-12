@@ -4,14 +4,14 @@
   align-items: start; 
   background-color: #f5f5f5; 
   height: 300px; 
-  padding: .5rem 10rem;
+  padding: .5rem 7rem 0rem 7rem;
   width: 100%; 
 }
 
 img {
-  height: 1100px;
-   width: 110vw;
-    margin: -25rem 12%;
+  height: 330%;
+   width: 130%;
+    margin: -20rem 25% 15% 15%;
     flex-basis: 20%;
     flex-grow: 0;
     flex-shrink: 2;  
@@ -20,6 +20,6 @@ img {
 .hamburger {
  padding: 3rem 1rem;
  margin-left: 8rem;
-height: 2em;
-width: 2%;
+ height: 15%;
+ width: 15%;
 }
