@@ -7,10 +7,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const AlphaCard = ({ letters, cards }) => {
+
+const AlphaCard = ({ letters, cards}) => {
   const [start, setStart] = useState(0);
   const [end, setEnd] = useState(cards);
 
+  
   const previous = () => {
     console.log(start);
     console.log(end);
@@ -21,7 +23,8 @@ const AlphaCard = ({ letters, cards }) => {
       setEnd(end - cards);
     }
   };
-  const next = () => {
+  const next = () => { 
+    console.log(window.innerWidth)
     console.log(start);
     console.log(end);
     if((start > letters.length - 1) || (start + cards > letters.length - 1)){
